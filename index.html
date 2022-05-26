@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script type="text/javascript">
+            var cadena;
+            var tener = RegExp("(TIENE|TIENES|TENES|TENGO|TENÉS)");
+            var edad = /AÑOS/;
+            function evaluarEdad(){
+                cadena = document.getElementById("txtPregunta").value;
+                cadena = cadena.toUpperCase();
+                document.getElementById("resultado1").innerHTML= tener.test(cadena);
+                document.getElementById("resultado2").innerHTML= edad.test(cadena);
+                if(tener.test(cadena)==true&&edad.test(cadena)==true){
+                    cod = 4
+                    alert (cod);
+                }
+                responder();
+            }
+            function responder(){
+                switch (cod){
+                    case 4:
+                        mensaje = "Tengo 24 años"
+                        break;
+                    default:
+                        mensaje = "Sin resultados"
+                }
+                document.getElementById("respuesta").innerHTML=mensaje;
+            }
+        </script>
+        <title>Valentine</title>
+    </head>
+    <body>
+        <h1>Valentine</h1>
+        <input type="text" name="name" value="" id="txtPregunta">
+        <input type="button" name="name" value="Submit" onclick="evaluarEdad()">
+
+        <p id="resultado1">
+        </p>
+        <p id="resultado2">
+        </p>
+        <p id="respuesta">
+        </p>
+        <script type="text/javascript" src="./chatbot.js"></script>
+    </body>
+</html>

@@ -1,6 +1,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <!--
         <script type="text/javascript">
             var cadena;
             var tener = RegExp("(TIENE|TIENES|TENES|TENGO|TENÉS)");
@@ -13,6 +14,8 @@
                 if(tener.test(cadena)==true&&edad.test(cadena)==true){
                     cod = 4
                     alert (cod);
+                }else{
+                    cod =0;
                 }
                 responder();
             }
@@ -27,19 +30,19 @@
                 document.getElementById("respuesta").innerHTML=mensaje;
             }
         </script>
+        -->
         <title>Valentine</title>
     </head>
     <body>
         <h1>Valentine</h1>
-        <input type="text" name="name" value="" id="txtPregunta">
-        <input type="button" name="name" value="Submit" onclick="evaluarEdad()">
-
+            <input type="text" name="txtPregunta" value="" id="txtPregunta">
+            <input type="button" name="name" value="Submit" onclick="evaluarPregunta()">
         <p id="resultado1">
         </p>
         <p id="resultado2">
         </p>
         <p id="respuesta">
         </p>
-        <script type="text/javascript" src="./chatbot.js"></script>
+        <script type="text/javascript" src="./index.js"></script>
     </body>
 </html>

@@ -1,6 +1,8 @@
 var cadena;
 var tener = RegExp("(TIENE|TIENES|TENES|TENGO|TENÉS)");
-var edad = /AÑOS/;
+var que = RegExp("(QUE|COMO|PORQUE|POR QUE|PARA QUE|DONDE|DE DONDE)");
+var es_hacer = RegExp("(ES|HACER|ESO|HAGO|HICIERON|HARE)");
+//var edad = /AÑOS/;
 function evaluarPregunta(){
     cadena = document.getElementsByName("txtPregunta")[0].value;
     cadena = cadena.toUpperCase();
